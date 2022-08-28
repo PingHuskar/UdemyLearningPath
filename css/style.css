@@ -5,8 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -15,14 +14,34 @@ body {
 
 .container {
   display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  mix-blend-mode: exclusion;
+}
+.title a {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  transition: 0.5s;
+}
+.title a:hover {
+  transform: scale(2);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-decoration: underline;
+}
+
 .snip1579 {
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -34,22 +53,16 @@ body {
   color: #ffffff;
   text-align: left;
   font-size: 16px;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
 }
-
-.snip1579 * {
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.snip1579:hover {
+  transform: scale(1.2);
 }
-
 .snip1579 img {
   max-width: 100%;
   vertical-align: top;
 }
-
 .snip1579 figcaption {
   position: absolute;
   height: 75px;
@@ -60,16 +73,18 @@ body {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+.snip1579 * {
+  transition: all 0.35s;
+  box-sizing: border-box;
+}
 .snip1579 h3 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   margin: 3px 0;
 }
-
 .snip1579 h5 {
   font-weight: 400;
   margin: 0;
@@ -94,17 +109,7 @@ body {
 }
 
 .snip1579 figcaption {
-  height: calc(85%);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  height: 85%;
+  transition-duration: 0.5s;
   opacity: 1;
-}
-
-.snip1579:hover figcaption {
-  display: none;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  opacity: 0;
-  color: transparent;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

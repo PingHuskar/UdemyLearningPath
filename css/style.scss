@@ -15,6 +15,29 @@ body {
     justify-content: center;
     text-align: center;
 }
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  mix-blend-mode: exclusion;
+  a {
+    text-decoration: none;
+    // color: inherit;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    transition: .5s;
+    &:hover {
+      transform: scale(2);
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      text-decoration: underline;
+    }
+  }
+}
+
 // https://codepen.io/littlesnippets/details/qqgKYL
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
 @import url(https://fonts.googleapis.com/css?family=Lato);
@@ -35,42 +58,45 @@ body {
   text-align: left;
   font-size: 16px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-.snip1579 * {
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.snip1579 img {
-  max-width: 100%;
-  vertical-align: top;
-}
-.snip1579 figcaption {
-  position: absolute;
-  height: 75px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  overflow: hidden;
-  padding: 15px;
-//   background-color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(0, 0, 0, 0.50);
-}
-.snip1579 h3 {
-  font-family: 'Oswald';
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
-  margin: 3px 0;
-}
-.snip1579 h5 {
-  font-weight: 400;
-  margin: 0;
-  text-transform: uppercase;
-  color: #bbb;
-  letter-spacing: 1px;
+  transition: .5s;
+  &:hover {
+    transform: scale(1.2);
+  }
+  img {
+    max-width: 100%;
+    vertical-align: top;
+  }
+  figcaption {
+    position: absolute;
+    height: 75px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    overflow: hidden;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.50);
+  }
+  * {
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  h3 {
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 3px 0;
+  }
+  h5 {
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+    color: #bbb;
+    letter-spacing: 1px;
+  }
 }
 .snip1579 blockquote {
   padding: 0;
@@ -93,10 +119,4 @@ body {
   height: calc(85%);
   transition-duration: 0.5s;
   opacity: 1;
-}
-.snip1579:hover figcaption {
-    display: none;
-    transition-duration: 0.5s;
-    opacity: 0;
-    color: transparent;
 }
