@@ -61,10 +61,14 @@ body {
   transition: .5s;
   &:hover {
     transform: scale(1.2);
+    img {
+      opacity: 0.9;
+    }
   }
   img {
     max-width: 100%;
     vertical-align: top;
+    opacity: 0.3;
   }
   figcaption {
     position: absolute;
@@ -97,26 +101,58 @@ body {
     color: #bbb;
     letter-spacing: 1px;
   }
-}
-.snip1579 blockquote {
+  blockquote {
   padding: 0;
   margin: 0;
   font-style: italic;
   font-size: 1em;
 }
-.snip1579 a {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-// .snip1579:hover figcaption,
-// .snip1579.hover figcaption {
-//   height: calc(85%);
-// }
-.snip1579 figcaption {
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  figcaption {
   height: calc(85%);
   transition-duration: 0.5s;
   opacity: 1;
+}
+
+
+  // great
+  &.ColtSteele {
+    border: 10px solid yellow;
+    img {
+      opacity: 0.7;
+    }
+  }
+  &.LeilaGharani {
+    border: 10px solid green;
+      img {
+        opacity: 0.7;
+      }
+  }
+  &.InsideCode {
+    border: 10px solid gray;
+      img {
+        opacity: 0.7;
+      }
+  }
+
+
+
+
+
+
+  // sucks
+  &.NarendraDwivedi {
+    figcaption {
+      opacity: 0.3;
+    }
+    img {
+      opacity: 0.1;
+    }
+  }
 }

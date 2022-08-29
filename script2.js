@@ -7,6 +7,7 @@ const imagesSrc = [...data.matchAll(imagesRegex)];
 const courseIdName = [...data.matchAll(courseIdNameRegex)];
 const instructor = [...data.matchAll(instructorRegex)];
 console.log(imagesSrc.length,courseIdName.length,instructor.length)
+// alert(`${imagesSrc.length},${courseIdName.length},${instructor.length}`)
 var datalist = []
 for (var i = 0; i<imagesSrc.length; i++) {
   datalist.push([imagesSrc[i][0],courseIdName[i][0],/^\d+/.exec(imagesSrc[i][0])[0],instructor[i][0]])
@@ -17,7 +18,7 @@ const limit = searchParam.get('limit') || datalist.length
 document.getElementById("courses").innerHTML = ""
 for (var i = 0; i< limit;i++) {
 document.getElementById("courses").innerHTML +=
-`<figure class="snip1579"><img src="https://img-c.udemycdn.com/course/240x135/${datalist[i][0]}.jpg" alt="${datalist[i][1]}"/>
+`<figure class="snip1579 ${datalist[i][3].replace(/[\s]/g,"").replace(","," ")}"><img src="https://img-c.udemycdn.com/course/240x135/${datalist[i][0]}.jpg" alt="${datalist[i][1]}"/>
 <figcaption>
   <h4>${datalist[i][1]}</h4>
   <h5>${datalist[i][3]}</h5>
