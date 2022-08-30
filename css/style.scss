@@ -22,6 +22,14 @@ body {
   font-family: sans-serif;
   text-transform: capitalize;
   mix-blend-mode: exclusion;
+  flex-flow: column;
+  font-weight: bold;
+  .header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    width: 50vw;
+  }
   a {
     text-decoration: none;
     // color: inherit;
@@ -35,6 +43,16 @@ body {
       margin-bottom: 5vh;
       text-decoration: underline;
     }
+  }
+  input {
+    width: 40vw;
+    height: 5vh;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  button {
+    padding: 10px 20px;
   }
 }
 
@@ -119,6 +137,12 @@ body {
   transition-duration: 0.5s;
   opacity: 1;
 }
+&.hide {
+  display: none;
+}
+&.show {
+  display: inline-block;
+}
 
 
   // great
@@ -155,4 +179,6 @@ body {
       opacity: 0.1;
     }
   }
+
+  
 }

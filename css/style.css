@@ -25,6 +25,14 @@ body {
   font-family: sans-serif;
   text-transform: capitalize;
   mix-blend-mode: exclusion;
+  flex-flow: column;
+  font-weight: bold;
+}
+.title .header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  width: 50vw;
 }
 .title a {
   text-decoration: none;
@@ -38,6 +46,16 @@ body {
   margin-top: 5vh;
   margin-bottom: 5vh;
   text-decoration: underline;
+}
+.title input {
+  width: 40vw;
+  height: 5vh;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+.title button {
+  padding: 10px 20px;
 }
 
 .snip1579 {
@@ -113,6 +131,12 @@ body {
   height: 85%;
   transition-duration: 0.5s;
   opacity: 1;
+}
+.snip1579.hide {
+  display: none;
+}
+.snip1579.show {
+  display: inline-block;
 }
 .snip1579.ColtSteele {
   border: 10px solid yellow;
