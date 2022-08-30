@@ -53,4 +53,4 @@ const Filter = (e) => {
 
 document.getElementById('searchFilter').addEventListener('keyup',Filter)
 
-document.getElementById('latest').href = `https://www.udemy.com/user${location.pathname}`
+document.getElementById('latest').href = `https://www.udemy.com/user/${location.pathname.split('/')[location.pathname.split('/').length-2]}`
