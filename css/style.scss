@@ -24,15 +24,29 @@ body {
   mix-blend-mode: exclusion;
   flex-flow: column;
   font-weight: bold;
+  color: salmon;
   .header {
     display: flex;
     flex-flow: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    max-width: 50vw;
     width: 50vw;
+  }
+  .keywords {
+      max-width: 50vw;
+      margin-bottom: 1vh;
+      button {
+        border-radius: 20px;
+        font-weight: bold;
+        &:hover {
+          cursor: pointer;
+          background: salmon;
+        }
+      }
   }
   a {
     text-decoration: none;
-    // color: inherit;
+    color: salmon;
     text-align: center;
     margin-top: 3vh;
     margin-bottom: 3vh;

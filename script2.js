@@ -12,8 +12,8 @@ var datalist = []
 for (var i = 0; i<imagesSrc.length; i++) {
   datalist.push([imagesSrc[i][0],courseIdName[i][0],/^\d+/.exec(imagesSrc[i][0])[0],instructor[i][0]])
 }
-console.log(datalist)
-console.log(datalist.length)
+// console.log(datalist)
+// console.log(datalist.length)
 document.getElementById('countcourses').innerText = datalist.length
 const searchParam = new URLSearchParams(location.search)
 const limit = searchParam.get('limit') || datalist.length
@@ -31,10 +31,10 @@ document.getElementById("courses").innerHTML +=
 const b = document.getElementsByClassName('snip1579')
 
 const filterButton = document.getElementById('filter')
-const Filter = (e) => {
-  e.preventDefault()
+const Filter = () => {
+  // e.preventDefault()
   const filterValue = document.getElementById('searchFilter').value
-  console.log(filterValue)
+  // console.log(filterValue)
   var c = 0
   for (var i = 0; i < b.length; i++) {
     // console.log(b[i].innerText)
