@@ -6,6 +6,7 @@ const instructorRegex = /(?<=instructors">).+?(?=<)/g
 const imagesSrc = [...data.matchAll(imagesRegex)];
 const courseIdName = [...data.matchAll(courseIdNameRegex)];
 const instructor = [...data.matchAll(instructorRegex)];
+// console.log(instructor.flat())
 
 var datalist = []
 

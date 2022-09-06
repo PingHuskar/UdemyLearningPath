@@ -38,16 +38,28 @@ const programmingLanguages = [
     "Mongo",
     "Mongoose",
     "Mobile App",
+    "Tailwind",
+    "Bootstrap",
+    "SCSS",
+    "SASS",
+    "MERN",
+    "MEAN",
 ]
 
-const instructors = [
-    "Colt Steele",
-    "Inside Code",
-]
+const instructors = [...new Set(instructor.flat())]
+console.log(`${instructors.length} instructors`)
+document.getElementById("countInstructor").innerText = `${instructors.length}`
+
 const otherKeywords = [
     "2022",
     "Computer Science",
     "Photoshop",
+    "Design",
+    "Health",
+    "English",
+    "Reading",
+    "TOEIC",
+    "Speed",
 ]
 
 const customKeywords = [

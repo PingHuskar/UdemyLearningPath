@@ -72,6 +72,16 @@ body {
   button {
     padding: 10px 20px;
   }
+  .searchDiv {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transform: scaleX(0.7);
+    &:hover {
+      transition: 0.5s ease-in-out;
+      transform: scaleX(1);
+      padding-bottom: 25vh;
+    }
+  }
 }
 
 // https://codepen.io/littlesnippets/details/qqgKYL
