@@ -88,7 +88,7 @@ body {
   padding-bottom: 25vh;
 }
 
-.snip1579 {
+figure.snip1579 {
   font-family: "Lato", Arial, sans-serif;
   position: relative;
   display: inline-block;
@@ -97,39 +97,40 @@ body {
   min-width: 250px;
   max-width: 240px;
   width: 100%;
-  background-color: #000000;
+  background-color: transparent;
   color: #ffffff;
   text-align: left;
   font-size: 16px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
 }
-.snip1579:hover {
+figure.snip1579:hover {
   transform: scale(1.2);
 }
-.snip1579:hover img {
+figure.snip1579:hover img {
   opacity: 0.9;
 }
-.snip1579 img {
+figure.snip1579:hover figcaption {
+  opacity: 0;
+}
+figure.snip1579 img {
   max-width: 100%;
   vertical-align: top;
-  opacity: 0.3;
+  opacity: 0.2;
 }
-.snip1579 figcaption {
+figure.snip1579 figcaption {
   position: absolute;
-  height: 75px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  padding: 0;
+  height: 100%;
+  top: 20%;
   overflow: hidden;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  transition-duration: 0.5s;
+  opacity: 1;
 }
-.snip1579 * {
-  transition: all 0.35s;
-  box-sizing: border-box;
-}
-.snip1579 h3 {
+figure.snip1579 figcaption h3 {
   font-family: "Oswald";
   text-transform: uppercase;
   font-size: 20px;
@@ -137,58 +138,57 @@ body {
   line-height: 24px;
   margin: 3px 0;
 }
-.snip1579 h5 {
+figure.snip1579 figcaption h5 {
   font-weight: 400;
   margin: 0;
   text-transform: uppercase;
   color: #bbb;
   letter-spacing: 1px;
 }
-.snip1579 blockquote {
+figure.snip1579 * {
+  transition: all 0.35s;
+  box-sizing: border-box;
+}
+figure.snip1579 blockquote {
   padding: 0;
   margin: 0;
   font-style: italic;
   font-size: 1em;
 }
-.snip1579 a {
+figure.snip1579 a {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.snip1579 figcaption {
-  height: 85%;
-  transition-duration: 0.5s;
-  opacity: 1;
-}
-.snip1579.hide {
+figure.snip1579.hide {
   display: none;
 }
-.snip1579.show {
+figure.snip1579.show {
   display: inline-block;
 }
-.snip1579.ColtSteele {
+figure.snip1579.ColtSteele {
   border: 10px solid yellow;
 }
-.snip1579.ColtSteele img {
+figure.snip1579.ColtSteele img {
   opacity: 0.7;
 }
-.snip1579.LeilaGharani {
+figure.snip1579.LeilaGharani {
   border: 10px solid green;
 }
-.snip1579.LeilaGharani img {
+figure.snip1579.LeilaGharani img {
   opacity: 0.7;
 }
-.snip1579.InsideCode {
+figure.snip1579.InsideCode {
   border: 10px solid gray;
 }
-.snip1579.InsideCode img {
+figure.snip1579.InsideCode img {
   opacity: 0.7;
 }
-.snip1579.NarendraDwivedi figcaption {
+figure.snip1579.NarendraDwivedi figcaption {
   opacity: 0.3;
 }
-.snip1579.NarendraDwivedi img {
+figure.snip1579.NarendraDwivedi img {
   opacity: 0.1;
 }/*# sourceMappingURL=style.css.map */

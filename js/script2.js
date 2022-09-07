@@ -1,11 +1,15 @@
+const searchParam = new URLSearchParams(location.search)
 const target = "_blank"
 const imagesRegex = /(?<=srcset="https:\/\/img-.\.udemycdn\.com\/course\/240x135\/).+?(?=\.jpg)/g;
 const courseIdNameRegex = /(?<=course_id=\d+">).+?(?=<)/g
 const instructorRegex = /(?<=instructors">).+?(?=<)/g
 
-const imagesSrc = [...data.matchAll(imagesRegex)];
-const courseIdName = [...data.matchAll(courseIdNameRegex)];
-const instructor = [...data.matchAll(instructorRegex)];
+const imagesSrc0 = [...data.matchAll(imagesRegex)];
+const imagesSrcLength = imagesSrc0.length
+const last = searchParam.get('last') || imagesSrcLength
+const imagesSrc = imagesSrc0.slice(imagesSrcLength-parseInt(last),imagesSrcLength);
+const courseIdName = [...data.matchAll(courseIdNameRegex)].slice(imagesSrcLength-parseInt(last),imagesSrcLength);
+const instructor = [...data.matchAll(instructorRegex)].slice(imagesSrcLength-parseInt(last),imagesSrcLength);
 // console.log(instructor.flat())
 
 var datalist = []
@@ -13,10 +17,10 @@ var datalist = []
 for (var i = 0; i<imagesSrc.length; i++) {
   datalist.push([imagesSrc[i][0],courseIdName[i][0],/^\d+/.exec(imagesSrc[i][0])[0],instructor[i][0]])
 }
-// console.log(datalist)
-// console.log(datalist.length)
+console.log(datalist)
+console.log(datalist.length)
 document.getElementById('countcourses').innerText = datalist.length
-const searchParam = new URLSearchParams(location.search)
+
 const limit = searchParam.get('limit') || datalist.length
 document.getElementById("courses").innerHTML = ""
 for (var i = 0; i< limit;i++) {
