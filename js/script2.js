@@ -29,6 +29,7 @@ document.getElementById("courses").innerHTML +=
 <figcaption>
   <h4>${datalist[i][1]}</h4>
   <h5>${datalist[i][3]}</h5>
+  <h6>${datalist[i][2]}</h6>
 </figcaption><a href="https://www.udemy.com/course-dashboard-redirect/?course_id=${datalist[i][2]}" target=${target}></a>
 </figure>`
 }
