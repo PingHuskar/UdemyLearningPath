@@ -45,7 +45,10 @@ const programmingLanguages = [
     "MERN",
     "MEAN",
 ]
-
+var instructor = []
+for (var data of datalist) {
+    instructor.push(data[3])
+}
 const instructors = [...new Set(instructor.flat())]
 console.log(`${instructors.length} instructors`)
 document.getElementById("countInstructor").innerText = `${instructors.length}`
