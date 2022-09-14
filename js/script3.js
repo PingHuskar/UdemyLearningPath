@@ -2,12 +2,13 @@ const searchParam = new URLSearchParams(location.search)
 const target = "_blank"
 
 console.log(datalist)
-console.log(datalist.length)
+// console.log(datalist.length)
 document.getElementById('countcourses').innerText = datalist.length
 
 const limit = searchParam.get('limit') || datalist.length
+const skip = searchParam.get('skip') || 0
 document.getElementById("courses").innerHTML = ""
-for (var i = 0; i< limit;i++) {
+for (var i = skip; i < parseInt(limit) + parseInt(skip) ;i++) {
 document.getElementById("courses").innerHTML +=
 `<figure class="snip1579 ${datalist[i][3].replace(/[\s]/g,"").replace(","," ")}">
 <img class="lazyload" data-src="https://img-c.udemycdn.com/course/240x135/${datalist[i][0]}.jpg" alt="${datalist[i][1]}"/>
