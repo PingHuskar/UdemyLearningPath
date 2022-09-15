@@ -1,7 +1,4 @@
-const users = [
-    { gh: "pinghuskar", uurl: "chadinchaipornpisuth2", uid: "11714446" },
-    { gh: "immortalgky", uurl: "jirakit", uid: "24370922" }
-]
+
 const elasticstack = document.getElementById('elasticstack')
 
 const opens = (gh,uurl) => {

@@ -198,9 +198,36 @@ figure.snip1579.InsideCode {
 figure.snip1579.InsideCode img {
   opacity: 0.7;
 }
+figure.snip1579.JonasSchmedtmann {
+  border: 5px solid gray;
+}
+figure.snip1579.JonasSchmedtmann img {
+  opacity: 1 !important;
+}
+figure.snip1579.TodsaponBanklongsi {
+  visibility: hidden;
+}
+figure.snip1579.TodsaponBanklongsi figcaption {
+  opacity: 0.1;
+}
+figure.snip1579.TodsaponBanklongsi img {
+  opacity: 0.1;
+}
+figure.snip1579.NarendraDwivedi {
+  visibility: hidden;
+}
 figure.snip1579.NarendraDwivedi figcaption {
-  opacity: 0.3;
+  opacity: 0.1;
 }
 figure.snip1579.NarendraDwivedi img {
+  opacity: 0.1;
+}
+figure.snip1579.KongRuksiam {
+  visibility: hidden;
+}
+figure.snip1579.KongRuksiam figcaption {
+  opacity: 0.1;
+}
+figure.snip1579.KongRuksiam img {
   opacity: 0.1;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1 @@
+document.title = `${location.pathname.split("/")[location.pathname.split("/").length - 2]}`.replace("-"," ").toUpperCase()

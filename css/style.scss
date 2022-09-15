@@ -1,5 +1,7 @@
 $primaryColor : salmon;
 $backgroundColor : rgba(0, 0, 0, 0.90);
+$Greats : 'JonasSchmedtmann';
+$Sucks : 'TodsaponBanklongsi','NarendraDwivedi','KongRuksiam';
 * {
     margin: 0;
     padding: 0;
@@ -217,18 +219,24 @@ figure.snip1579 {
       }
   }
 
-
-
-
-
-
-  // sucks
-  &.NarendraDwivedi {
-    figcaption {
-      opacity: 0.3;
+  @each $Grate in $Greats {
+    &.#{$Grate} {
+      border: 5px solid gray;
+      img {
+        opacity: 1 !important;
+      }
     }
-    img {
-      opacity: 0.1;
+  }
+  @each $Suck in $Sucks {
+    &.#{$Suck} {
+      // display: none;
+      visibility: hidden;
+      figcaption {
+        opacity: 0.1;
+      }
+      img {
+        opacity: 0.1;
+      }
     }
-  }  
+  }
 }

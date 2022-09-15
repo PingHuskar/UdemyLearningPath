@@ -1,9 +1,9 @@
-TweenMax.staggerFrom('.snip1579',0.7,{
+TweenMax.staggerFrom('.snip1579',2,{
     y: 100,
     ease: Back.easeOut,
     scale: 0.2,
     opacity: 0
-}, 0.1)
+}, 0.05)
 
 $('.snip1579').hover(function() {
     TweenMax.to($(this).find('img'),0.1,{
