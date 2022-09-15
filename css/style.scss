@@ -114,9 +114,9 @@ figure.snip1579 {
   transition: .5s;
   &:hover {
     transform: scale(1.2);
-    // img {
-    //   opacity: 0.9;
-    // }
+    img {
+      opacity: 0.9;
+    }
     // figcaption {
     //   opacity: 0;
     // }
@@ -230,12 +230,19 @@ figure.snip1579 {
   @each $Suck in $Sucks {
     &.#{$Suck} {
       // display: none;
-      visibility: hidden;
+      // visibility: hidden;
+      &:hover {
+        visibility: visible;
+        opacity: 1;
+        img {
+          opacity: .2;
+        }
+      }
       figcaption {
-        opacity: 0.1;
+        opacity: 0.001;
       }
       img {
-        opacity: 0.1;
+        opacity: 0.001;
       }
     }
   }
