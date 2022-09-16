@@ -1,9 +1,11 @@
-TweenMax.staggerFrom('.snip1579',2,{
+const dspspd = searchParam.get('dspspd') || 2
+const spd = searchParam.get('spd') || 0.05
+TweenMax.staggerFrom('.snip1579', parseFloat(dspspd) ,{
     y: 100,
     ease: Back.easeOut,
     scale: 0.2,
     opacity: 0
-}, 0.05)
+}, parseFloat(spd))
 
 $('.snip1579').hover(function() {
     // TweenMax.to($(this).find('img'),0.1,{
